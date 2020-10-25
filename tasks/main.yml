@@ -1,2 +1,14 @@
 ---
 # tasks file for ansible-ssh
+
+- name: Create ~/.ssh if directory does not exist
+  file:
+    path: /home/{{user}}/.ssh
+    state: directory
+
+- name: generate SSH key
+  openssh_keypair:
+    state: present
+    comment: {{ssh_comment}}
+    path: {{ssh_path}}
+  register: task_result

@@ -1,2 +1,5 @@
 ---
 # defaults file for ansible-ssh
+
+ssh_path: /home/{{user}}/.ssh/id_rsa
+ssh_comment: arch
