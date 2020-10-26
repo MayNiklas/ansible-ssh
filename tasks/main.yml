@@ -3,7 +3,7 @@
 
 - name: Create ~/.ssh if directory does not exist
   file:
-    path: /home/{{user}}/.ssh
+    path: "{{ ansible_env.HOME }}/.ssh"
     state: directory
 
 - name: generate SSH key
