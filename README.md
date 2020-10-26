@@ -1,7 +1,8 @@
-Role Name
+ansible-ssh
 =========
+[![Build Status](https://travis-ci.com/MayNiklas/ansible-ssh.svg?branch=main)](https://travis-ci.com/MayNiklas/ansible-ssh)
 
-A brief description of the role goes here.
+- making sure the user has it's own ssh key generated
 
 Requirements
 ------------
