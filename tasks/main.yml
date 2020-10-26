@@ -9,6 +9,6 @@
 - name: generate SSH key
   openssh_keypair:
     state: present
-    comment: ssh_comment
-    path: ssh_path
+    comment: "{{ ssh_comment }}"
+    path: "{{ ssh_path }}"
   register: task_result
