@@ -2,9 +2,10 @@
 # tasks file for ansible-ssh
 
 - name: Create ~/.ssh if directory does not exist
-  file:
+  ansible.builtin.file:
     path: "{{ ansible_env.HOME }}/.ssh"
     state: directory
+    mode: 0700
 
 - name: generate SSH key
   openssh_keypair:
